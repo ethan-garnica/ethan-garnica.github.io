@@ -1,36 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ethan Garnica</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-    <link href="/css/style.css" rel="stylesheet" type="text/css" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ethan Garnica</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/d79eede800.js" crossorigin="anonymous"></script>
+  <link href="/css/style.css" rel="stylesheet" type="text/css" />
 </head>
+
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="/index.html">Ethan Garnica</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="/index.html">Home</a></li>
-              <li><a href="/html/solarSystem.html">Solar System</a></li>
-              <li><a href="/html/cipherCalc.html">Cipher Calculator</a></li>
-            </ul>
+
+  <nav class="navbar navbar-expand-sm navbar-dark sticky-top" style="background-color: rgb(54, 70, 94);">
+    <a class="navbar-brand" href="#">Ethan Garnica</a>
+    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId"
+      aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+      <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#resume" tabindex="-1" aria-disabled="true">Resume</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact" tabindex="-1" aria-disabled="true">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/html/solarSystem.html" tabindex="-1" aria-disabled="true">Solar System</a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+  <br><br>
+  <div id="home" class="jumbotron">
+
+    <h1>Ethan Garnica</h1>
+
+    <ul id="links">
+      <li class="clickable">
+        <a href="https://www.linkedin.com/in/ethangarnica/">
+          <i class="fa fa-3x fa-linkedin"></i>
+        </a>
+      </li>
+      <li class="clickable">
+        <a href="https://github.com/ethan-garnica">
+          <i class="fa fa-3x fa-github"></i>
+        </a>
+      </li>
+      <li class="clickable">
+        <a href="mailto:ethangarnica2@gmail.com">
+          <i class="fa fa-3x fa-envelope"></i>
+        </a>
+      </li>
+
+
+    </ul>
+
+
+  </div>
+  <div id="about">
+    <h1>About Me</h1>
+    <p id="aboutText">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+      ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+      nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+      est laborum."</p>
+  </div>
+  </div>
+  <div id="resume">
+    <div>
+      <h1>Resume</h1>
+      <h3>Skills</h3>
+      <div class="border rounded p-3">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+
+              <table class="table table-borderless">
+                <thead>
+                  <th>Languages</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><i class="fa-brands fa-java"></i> Java</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fa-brands fa-cuttlefish">++</i> C++</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fa-brands fa-square-js"></i> JavaScript</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fa-brands fa-python"></i> Python</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="col">
+
+              <table class="table table-borderless">
+                <thead>
+                  <th>Web Development</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><i class="fa-brands fa-html5"></i> HTML</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fa-brands fa-css3-alt"></i> CSS</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fa-brands fa-bootstrap"></i> Bootstrap</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fa-brands fa-node-js"></i> Node.js</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="col">
+              <table class="table table-borderless">
+                <thead>
+                  <th>Other tools</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><i class="fa-solid fa-database"></i> MySQL</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fa-brands fa-git-alt"></i> Git</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fa-solid fa-code"></i> Visual Studio Code</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
-    </nav>
-    
-    
-    <script src="js/script.js"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+        </div>
+      </div>
+      <h3>Experience</h3>
+      <div class="exp">
+        <p class="lead">From January 2021 to May 2021 I worked as a student peer mentor at Hartnell College. During this
+          time I:</p>
+        <ul>
+          <li class="expLi">Mentored and assisted incoming freshman computer science majors to navigate the curriculum
+            and academic resources.</li>
+          <li class="expLi">Provided guidance and support in understanding programming concepts and assignments</li>
+          <li class="expLi">Conducted one-on-one to enhance students' understanding of computer science topics.</li>
+        </ul>
+      </div>
+      <h3>Projects</h3>
+      <div class="projects">
+
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <a class="btn btn-primary"href="/html/solarSystem.html">Solar System Animation</a>
+              <ul>
+                <li>Developed a web-based solar system animation using WebGL and JavaScript.</li>
+                <li>Implemented the orbital motion of the eight planets and Earth's moon around the sun</li>
+                <li>Provided interactive features such as drag clicking to turn the camera centered on the sun and
+                  zooming in using the mouse wheel.</li>
+              </ul>
+            </div>
+            <div class="col">
+              <a class="btn btn-primary" href="https://github.com/Linkit-CST499-SP23/CST-499-Capstone-Project-SP23---LinkIt">LinkIt - Data Integration Tool</a>
+              <ul>
+                <li>Created an automated tool using Python, regex, and Visual Studio Code to streamline data
+                  integration processes.
+                  </li>
+                <li>Developed plugins using regex and the USaddress Python package to search for URLs and street
+                  addresses</li>
+                <li>Generated a CSV file displaying the likely type of data for each column based on confidence
+                  scores returned by the plugins.
+                  </li>
+              </ul>
+            </div>
+            <div class="col">
+              <a class="btn btn-primary" href="https://github.com/ethan-garnica/video-game-database">Video Game Database</a>
+              <ul>
+                <li>Developed a dynamic website using JavaScript, HTML, CSS, and Bootstrap.
+                </li>
+                <li>Implemented functionality to allow users to search for video game developers, studios, games,
+                  franchises, and publishers.
+                  </li>
+                <li>Utilized Node.js and MySQL for backend development, enabling data storage and retrieval.</li>
+                <li>Designed a user-friendly interface with responsive design principles.</li>
+              </ul>
+            </div>
+            <div class="col">
+              <a class="btn btn-primary" href="https://github.com/ethan-garnica/subnet-calculator">Subnet Calculator</a>
+              <ul>
+                <li>Developed a subnet calculator in Python for command-line usage.</li>
+                <li>Accepts user input in the form of IP address with CIDR notation (e.g., 192.168.24.10/24).</li>
+                <li>Calculates and displays the subnet mask, first host, last host, broadcast address, number of usable hosts, validity of the input as a host, and subnet class.</li>
+                <li>Provides a streamlined solution for determining subnet parameters.</li>
+          
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="contact">
+    <div class="container">
+      <h1>Contact Form</h1>
+      <form action="https://formsubmit.co/ethangarnica2@gmail.com" method="POST">
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="mb-3">
+          <label for="subject" class="form-label">Subject</label>
+          <input type="text" class="form-control" id="subject" name="subject" required>
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+
+  </div>
+
+
+  <script src="js/script.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

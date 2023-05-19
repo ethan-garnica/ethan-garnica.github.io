@@ -1,73 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solar System</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-    <link href="../css/style.css" rel="stylesheet" type="text/css" />
-    <!-- our own math -->
-    <script src="../solar_system/math/vector3.js"></script>
-    <script src="../solar_system/math/vector4.js"></script>
-    <script src="../solar_system/math/matrix4.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solar System</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="../css/style.css" rel="stylesheet" type="text/css" />
+  <!-- our own math -->
+  <script src="../solar_system/math/vector3.js"></script>
+  <script src="../solar_system/math/vector4.js"></script>
+  <script src="../solar_system/math/matrix4.js"></script>
 
-    <!-- our own utility code -->
-    <script src="../solar_system/misc/input.js"></script>
-    <script src="../solar_system/misc/time.js"></script>
-    <script src="../solar_system/misc/utils-gl.js"></script>
-    <script src="../solar_system/misc/utils-loading-promises.js"></script>
+  <!-- our own utility code -->
+  <script src="../solar_system/misc/input.js"></script>
+  <script src="../solar_system/misc/time.js"></script>
+  <script src="../solar_system/misc/utils-gl.js"></script>
+  <script src="../solar_system/misc/utils-loading-promises.js"></script>
 
-    <!-- our own geometry code -->
-    <script src="../solar_system/misc/webgl-geometry-json.js"></script>
-    <script src="../solar_system/misc/webgl-geometry-quad.js"></script>
+  <!-- our own geometry code -->
+  <script src="../solar_system/misc/webgl-geometry-json.js"></script>
+  <script src="../solar_system/misc/webgl-geometry-quad.js"></script>
 
-    <script src="../solar_system/misc/camera.orbit.js"></script>
-    <script src="../solar_system/app.js"></script>
+  <script src="../solar_system/misc/camera.orbit.js"></script>
+  <script src="../solar_system/app.js"></script>
 
-    <!-- Don't bother looking for app icon -->
-    <link rel="shortcut icon" href="">
-    <style>
-        /* center the canvas on the screen */
-        #webgl-canvas {
-            border: solid;
-            display: block;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: auto;
-            height: 100%;
-            width: 100%;
+  <!-- Don't bother looking for app icon -->
+  <link rel="shortcut icon" href="">
+  <style>
+    /* center the canvas on the screen */
+    #webgl-canvas {
+      border: solid;
+      position: fixed; /* Change from 'absolute' to 'fixed' */
+      top: 56px; /* Adjust the top position to accommodate the height of the navbar */
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin-bottom: auto;
+      height: calc(100% - 56px); /* Subtract the navbar height from the canvas height */
+      width: 100%;
         }
-    </style>
+  </style>
 </head>
-<body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="#">Ethan Garnica</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-              <li><a href="/index.html">Home</a></li>
-              <li class="active"><a href="/html/solarSystem.html">Solar System</a></li>
-              <li><a href="/html/cipherCalc.html">Cipher Calculator</a></li>
-              
-            </ul>
-          </div>
-    </nav>
-    <canvas id="webgl-canvas" width="1920" height="1080"></canvas>
-    <script src="../js/script.js"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 
-    
+<body>
+  
+  <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: rgb(54, 70, 94);">
+    <a class="navbar-brand" href="/index.html">Ethan Garnica</a>
+    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+        aria-expanded="false" aria-label="Toggle navigation"></button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html#about">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html#resume" tabindex="-1" aria-disabled="true">Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html#contact" tabindex="-1" aria-disabled="true">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/html/solarSystem.html" tabindex="-1" aria-disabled="true">Solar System</a>
+          </li>
+        </ul>
+        
+    </div>
+  </nav>
+
+  <canvas id="webgl-canvas" width="1920" height="1000"></canvas>
+  <script src="../js/script.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
+    integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+    crossorigin="anonymous"></script>
+
+
 </body>
+
 </html>

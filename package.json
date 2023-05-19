@@ -1,5 +1,17 @@
 {
   "dependencies": {
-    "bootstrap": "^3.4.1"
-  }
+    "bootstrap": "^5.0.1",
+    "express": "^4.18.2",
+    "nodemailer": "^6.9.2"
+  },
+  "name": "ethan-garnica.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
